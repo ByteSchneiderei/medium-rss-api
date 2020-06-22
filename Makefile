@@ -14,10 +14,12 @@ build: vet
 	go build ${LDFLAGS} -o $(BUILD_DIR)/$(BINARY_NAME) -v ./cmd/$(BINARY_NAME)
 
 all_linux: clean fmt lint test
-	CGO_ENABLED=0 GOOS=linux go build -a -tags netgo ${LDFLAGS} .
+	CGO_ENABLED=0 GOOS=linux go build -a -tags netgo ${LDFLAGS} -o $(BUILD_DIR)/$(BINARY_NAME) -v ./cmd/$(BINARY_NAME)
 
 linux: clean
-	CGO_ENABLED=0 GOOS=linux go build -a -tags netgo ${LDFLAGS} .
+	CGO_ENABLED=0 GOOS=linux go build -a -tags netgo ${LDFLAGS} -o $(BUILD_DIR)/$(BINARY_NAME) -v ./cmd/$(BINARY_NAME)
+
+
 
 clean:
 	go clean
