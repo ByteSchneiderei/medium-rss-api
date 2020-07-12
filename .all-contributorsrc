@@ -13,6 +13,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "tstrohmeier",
+      "name": "Thomas Strohmeier",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/13830953?v=4",
+      "profile": "https://twitter.com/t_strohmeier",
+      "contributions": [
+        "platform"
+      ]
     }
   ],
   "contributorsPerLine": 7,
