@@ -7,7 +7,7 @@ import (
 
 	"golang.org/x/net/html"
 
-	"byteschneiderei.com/intern/medium/api/pkg/config"
+	"github.com/ByteSchneiderei/medium-rss-api/pkg/config"
 	"github.com/mmcdole/gofeed"
 	"github.com/patrickmn/go-cache"
 )
