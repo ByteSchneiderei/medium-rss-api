@@ -1,4 +1,4 @@
-module byteschneiderei.com/intern/medium/api
+module github.com/ByteSchneiderei/medium-rss-api
 
 go 1.14
 

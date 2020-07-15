@@ -14,9 +14,9 @@ import (
 	"github.com/patrickmn/go-cache"
 	log "github.com/sirupsen/logrus"
 
-	"byteschneiderei.com/intern/medium/api/pkg/config"
-	"byteschneiderei.com/intern/medium/api/pkg/medium"
-	"byteschneiderei.com/intern/medium/api/pkg/version"
+	"github.com/ByteSchneiderei/medium-rss-api/pkg/config"
+	"github.com/ByteSchneiderei/medium-rss-api/pkg/medium"
+	"github.com/ByteSchneiderei/medium-rss-api/pkg/version"
 )
 
 // VERSION indictes the current version

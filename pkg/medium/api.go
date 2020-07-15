@@ -5,7 +5,7 @@ import (
 
 	"github.com/go-chi/render"
 
-	errPkg "byteschneiderei.com/intern/medium/api/pkg/error"
+	errPkg "github.com/ByteSchneiderei/medium-rss-api/pkg/error"
 )
 
 // Handler handles http request and return response
