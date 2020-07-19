@@ -46,7 +46,7 @@ func (m *Medium) Fetch() (*Response, error) {
 	posts := make([]Post, 0)
 	for _, item := range feed.Items {
 		guid := strings.Split(item.GUID, "/")
-		content, err := tokenizeHTML(item.Content)
+		content, err := TokenizeHTML(item.Content)
 		if err != nil {
 			return nil, err
 		}
@@ -73,7 +73,8 @@ func (m *Medium) Fetch() (*Response, error) {
 	return &response, nil
 }
 
-func tokenizeHTML(s string) (*Node, error) {
+// TokenizeHTML parses html string into Node struct
+func TokenizeHTML(s string) (*Node, error) {
 	htmlContent := strings.NewReader(s)
 	doc, err := html.Parse(htmlContent)
 	if err != nil {
@@ -84,7 +85,7 @@ func tokenizeHTML(s string) (*Node, error) {
 	body := &Node{
 		Tag:      "body",
 		Text:     "",
-		Attrs:    nil,
+		Attrs:    []map[string]string{},
 		Children: children,
 	}
 	excludedTags := map[string]bool{
@@ -108,16 +109,16 @@ func tokenizeHTML(s string) (*Node, error) {
 		}
 
 		if continueTokenization {
+			attrs := make([]map[string]string, 0)
 			if n.Type == html.ElementNode {
-				attrs := make([]map[string]string, 0)
 				for _, a := range n.Attr {
 					attrs = append(attrs, map[string]string{"key": a.Key, "value": a.Val})
 				}
 				childNode.Tag = n.Data
-				childNode.Attrs = attrs
 			} else if n.Type == html.TextNode {
 				childNode.Text = n.Data
 			}
+			childNode.Attrs = attrs
 		}
 
 		for child := n.FirstChild; child != nil; child = child.NextSibling {
