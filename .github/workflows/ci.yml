@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       VERSION: $( cat VERSION )
-      DOCKERHUB_REPO: byteschneiderei/medium-rss-api
-      GITHUB_REPO:  docker.pkg.github.com/byteschneiderei/medium-rss-api/medium-rss-api
+      DOCKERHUB_REGISTRY: byteschneiderei/medium-rss-api
+      GITHUB_REGISTRY:  docker.pkg.github.com/byteschneiderei/medium-rss-api/medium-rss-api
     steps:
       -
         name: Checkout
@@ -35,15 +35,15 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Build 
-        run:  docker build --tag "${{ env.DOCKERHUB_REPO }}:${{ env.VERSION }}" .
+        run:  docker build --tag "${{ env.DOCKERHUB_REGISTRY }}:${{ env.VERSION }}" .
       -
         name: Push
         run: |
-          docker push ${{ env.DOCKERHUB_REPO }}:${{ env.VERSION }}
-          docker tag ${{ env.DOCKERHUB_REPO }}:${{ env.VERSION }} ${{ env.DOCKERHUB_REPO }}:latest
-          docker push ${{ env.DOCKERHUB_REPO }}:latest
-          docker tag ${{ env.DOCKERHUB_REPO }}:latest ${{ env.GITHUB_REPO }}:${{ env.VERSION }}
-          docker push ${{ env.GITHUB_REPO }}:${{ env.VERSION }}
-          docker tag ${{ env.GITHUB_REPO }}:${{ env.VERSION }} ${{ env.GITHUB_REPO }}:latest
-          docker push ${{ env.GITHUB_REPO }}:latest
+          docker push ${{ env.DOCKERHUB_REGISTRY }}:${{ env.VERSION }}
+          docker tag ${{ env.DOCKERHUB_REGISTRY }}:${{ env.VERSION }} ${{ env.DOCKERHUB_REGISTRY }}:latest
+          docker push ${{ env.DOCKERHUB_REGISTRY }}:latest
+          docker tag ${{ env.DOCKERHUB_REGISTRY }}:latest ${{ env.GITHUB_REGISTRY }}:${{ env.VERSION }}
+          docker push ${{ env.GITHUB_REGISTRY }}:${{ env.VERSION }}
+          docker tag ${{ env.GITHUB_REGISTRY }}:${{ env.VERSION }} ${{ env.GITHUB_REGISTRY }}:latest
+          docker push ${{ env.GITHUB_REGISTRY }}:latest
       
