@@ -23,7 +23,7 @@ jobs:
         uses: docker/login-action@v1 
         with:
           registry: docker.pkg.github.com
-          username: SebiSpace
+          username: byte-automation
           password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Build 
