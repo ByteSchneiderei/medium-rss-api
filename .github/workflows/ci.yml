@@ -27,8 +27,8 @@ jobs:
           password: ${{ secrets.CR_PAT }}
       -
         name: Build 
-        run:  docker build --tag "docker.pkg.github.com/byteschneiderei/medium-rss-api/prebuilt:latest"
+        run:  docker build --tag "docker.pkg.github.com/byteschneiderei/medium-rss-api/medium-rss-api:latest"
       -
         name: Push
-        run:  docker push docker.pkg.github.com/byteschneiderei/medium-rss-api/prebuilt:latest
+        run:  docker push docker.pkg.github.com/byteschneiderei/medium-rss-api/medium-rss-api:latest
       
