@@ -19,11 +19,16 @@ There are some configurations which takes place in environment variable that nee
 | GO_ENV | N | development | Environment stage |
 
 ## Installation & Usage
-To install, simply clone this repository and run 
+To build, simply clone this repository and run 
 ```
 make build
 ```
 You can run `watcher.sh` to run the server and re-build automatically everytime the go file changes.
+
+## Installation 
+To install simply pull the docker image.
+
+## Usage
 
 Currently, available endpoints are :  
 
