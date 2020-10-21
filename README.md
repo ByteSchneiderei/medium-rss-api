@@ -1,6 +1,6 @@
 # Medium RSS API
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A REST API wrapper for [Medium RSS Feed](https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds) with built in cache mechanism and [HTML Tokenizer](https://godoc.org/golang.org/x/net/html) that parses Medium's plain HTML string into DOM objects. Just set your medium's user profile name or publication and you're good to go!  
@@ -42,6 +42,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/wahyudibo"><img src="https://avatars2.githubusercontent.com/u/4588408?v=4" width="100px;" alt=""/><br /><sub><b>Wahyudi Wibowo</b></sub></a><br /><a href="https://github.com/ByteSchneiderei/medium-rss-api/commits?author=wahyudibo" title="Code">💻</a></td>
     <td align="center"><a href="https://twitter.com/t_strohmeier"><img src="https://avatars3.githubusercontent.com/u/13830953?v=4" width="100px;" alt=""/><br /><sub><b>Thomas Strohmeier</b></sub></a><br /><a href="#platform-tstrohmeier" title="Packaging/porting to new platform">📦</a></td>
+    <td align="center"><a href="https://github.com/SebiSpace"><img src="https://avatars2.githubusercontent.com/u/10374656?v=4" width="100px;" alt=""/><br /><sub><b>Sebastian Schaffer</b></sub></a><br /><a href="#platform-SebiSpace" title="Packaging/porting to new platform">📦</a></td>
   </tr>
 </table>
 
