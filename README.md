@@ -23,9 +23,10 @@ To build, simply clone this repository and run
 ```
 make build
 ```
+## Developing
 You can run `watcher.sh` to run the server and re-build automatically everytime the go file changes.
 
-## Usage 
+## Installation & Usage 
 To install simply pull the docker image.
 
 ## Endpoints
