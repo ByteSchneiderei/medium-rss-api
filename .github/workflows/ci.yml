@@ -27,7 +27,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Build 
-        run:  docker build --tag "docker.pkg.github.com/byteschneiderei/medium-rss-api/medium-rss-api:latest"
+        run:  docker build --tag "docker.pkg.github.com/byteschneiderei/medium-rss-api/medium-rss-api:latest" .
       -
         name: Push
         run:  docker push docker.pkg.github.com/byteschneiderei/medium-rss-api/medium-rss-api:latest
