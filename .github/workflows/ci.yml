@@ -23,7 +23,7 @@ jobs:
         uses: docker/login-action@v1 
         with:
           registry: docker.pkg.github.com
-          username: byte-automation
+          username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       -
         name: Build 
