@@ -6,6 +6,6 @@ RUN make linux
 
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates
-COPY --from=builder /go/src/github.com/ByteSchneiderei/medium-rss-api /medium-rss-api
+COPY --from=builder /go/src/github.com/ByteSchneiderei/medium-rss-api/build/medium-rss-api /medium-rss-api
 
 CMD ["/medium-rss-api"]
