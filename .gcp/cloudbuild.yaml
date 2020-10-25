@@ -1,0 +1,9 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['pull', 'byteschneiderei/medium-rss-api:latest']
+  
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['tag', 'byteschneiderei/medium-rss-api:latest', 'gcr.io/$PROJECT_ID/medium-rss-api:latest']
+  
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/medium-rss-api:latest']
