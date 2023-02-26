@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  byte_medium_rss_api:
+    image: byteschneiderei/medium-rss-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      MEDIUM_PROFILE: "<PROFILE>"
+      PORT: 8080
+      GO_ENV: development
