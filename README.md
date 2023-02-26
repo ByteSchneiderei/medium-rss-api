@@ -27,7 +27,26 @@ make build
 You can run `watcher.sh` to run the server and re-build automatically everytime the go file changes.
 
 ## Installation & Usage 
-To install simply pull the docker image.
+```
+docker pull byteschneiderei/medium-rss-api
+```
+
+create a .env file like this:
+```
+MEDIUM_PROFILE=your-profile
+MEDIUM_RSSFEED_URL='https://medium.com/feed'
+BASE_URL=localhost
+PORT=8080
+GO_ENV=development
+```
+and run
+```
+docker run --env-file .env byteschneiderei/medium-rss-api
+```
+or just run
+```
+docker run -e MEDIUM_PROFILE=your-profile byteschneiderei/medium-rss-api
+```
 
 ## Endpoints
 
