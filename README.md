@@ -5,7 +5,7 @@
 
 A REST API wrapper for [Medium RSS Feed](https://help.medium.com/hc/en-us/articles/214874118-RSS-feeds) with built in cache mechanism and [HTML Tokenizer](https://godoc.org/golang.org/x/net/html) that parses Medium's plain HTML string into DOM objects. Just set your medium's user profile name or publication and you're good to go!  
 
-Built and tested using Golang v1.14.4.
+Built wit v1.14.4 and tested using Golang v1.20.0.
 
 ## Configuration
 

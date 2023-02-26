@@ -1,4 +1,4 @@
-FROM golang:1.14.0 as builder
+FROM golang:1.20.0 as builder
 WORKDIR /go/src/github.com/ByteSchneiderei/medium-rss-api
 COPY . .
 RUN make linux 
